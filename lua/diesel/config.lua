@@ -6,7 +6,7 @@ M.defaults = {
   -- dependency-free Node, so neither needs a build or package manager.
   lsp = {
     enable = true,
-    url = "https://github.com/graphicmismatch/diesel-lsp",
+    url = "https://github.com/graphicmismatch-tools/diesel-lsp",
     branch = "master",
     -- Set to a local checkout to develop against it instead of the clone.
     path = nil,
@@ -18,7 +18,7 @@ M.defaults = {
   },
   treesitter = {
     enable = true,
-    url = "https://github.com/graphicmismatch/diesel-treesitter",
+    url = "https://github.com/graphicmismatch-tools/diesel-treesitter",
     branch = "master",
     -- Set to a local checkout to develop against it instead of the clone.
     path = nil,

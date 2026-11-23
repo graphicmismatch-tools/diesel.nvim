@@ -1,14 +1,14 @@
 # diesel.nvim
 
 Neovim support for **Diesel**, the C-like text format used by the
-[Petroleum](https://github.com/graphicmismatch/Petroleum) synthesizer for patches
+[Petroleum](https://github.com/graphicmismatch-tools/Petroleum) synthesizer for patches
 (`.dsl` files).
 
 One plugin, both halves:
 
-- **[diesel-treesitter](https://github.com/graphicmismatch/diesel-treesitter)** - the
+- **[diesel-treesitter](https://github.com/graphicmismatch-tools/diesel-treesitter)** - the
   grammar, compiled by nvim-treesitter, for highlighting, folds and text objects.
-- **[diesel-lsp](https://github.com/graphicmismatch/diesel-lsp)** - the language server,
+- **[diesel-lsp](https://github.com/graphicmismatch-tools/diesel-lsp)** - the language server,
   for diagnostics, completion, hover, go-to-definition, document symbols and rename.
 
 Both are fetched from GitHub on first use. The server is dependency-free Node, so
@@ -20,7 +20,7 @@ cloning it *is* the install: no npm, no build step.
 
 ```lua
 {
-  "graphicmismatch/diesel.nvim",
+  "graphicmismatch-tools/diesel.nvim",
   ft = "diesel",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = {},
@@ -31,7 +31,7 @@ cloning it *is* the install: no npm, no build step.
 
 ```lua
 use {
-  "graphicmismatch/diesel.nvim",
+  "graphicmismatch-tools/diesel.nvim",
   requires = { "nvim-treesitter/nvim-treesitter" },
   config = function() require("diesel").setup() end,
 }
@@ -68,7 +68,7 @@ Defaults:
 require("diesel").setup {
   lsp = {
     enable = true,
-    url = "https://github.com/graphicmismatch/diesel-lsp",
+    url = "https://github.com/graphicmismatch-tools/diesel-lsp",
     branch = "master",
     path = nil,          -- use a local checkout instead of cloning
     config = {},         -- merged into the vim.lsp.config entry
@@ -76,7 +76,7 @@ require("diesel").setup {
   },
   treesitter = {
     enable = true,
-    url = "https://github.com/graphicmismatch/diesel-treesitter",
+    url = "https://github.com/graphicmismatch-tools/diesel-treesitter",
     branch = "master",
     path = nil,          -- use a local checkout instead of cloning
     auto_install = true, -- compile on the first .dsl file

@@ -32,11 +32,11 @@ vim.fn.mkdir(data, "p")
 
 require("diesel").setup {
   lsp = {
-    url = os.getenv "DIESEL_LSP_URL" or "https://github.com/graphicmismatch/diesel-lsp",
+    url = os.getenv "DIESEL_LSP_URL" or "https://github.com/graphicmismatch-tools/diesel-lsp",
     branch = "master",
   },
   treesitter = {
-    url = os.getenv "DIESEL_TS_URL" or "https://github.com/graphicmismatch/diesel-treesitter",
+    url = os.getenv "DIESEL_TS_URL" or "https://github.com/graphicmismatch-tools/diesel-treesitter",
     enable = os.getenv "DIESEL_SKIP_TS" == nil,
   },
 }
